@@ -53,12 +53,12 @@ $(document).ready(function(){
                         .fadeOut(2000)
                         .fadeIn(1000)
                         .animate({width:'+=10%'}, 1000)
-                        .animate({height:'0px'}, 2000, function(){$(this).show(image.src = "images/joyeuxNoel.jpg").dequeue();})
-//                        .slideUp(1000)
-//                        .delay(500)
-//                        .queue(function(){
-//                            $(this).show(image.src = "images/joyeuxNoel.jpg").dequeue();
-//                        })
+//                        .animate({height:'0px'}, 2000, function(){$(this).show(image.src = "images/joyeuxNoel.jpg").dequeue();})
+                        .slideUp(1000)
+                        .delay(500)
+                        .queue(function(){
+                            $(this).show(image.src = "images/joyeuxNoel.jpg").dequeue();
+                        })
                         .slideDown(300)
                         .animate({width:'-=10%'}, 500)
                         .animate({left: '+=200px'}, 500)
@@ -66,7 +66,7 @@ $(document).ready(function(){
     
                 // permet d'arrêter l'animation après celle qui a été lancée
                 $('#arreter').click(function(){
-                    $('img').clearQueue();
+                    $('img').stop(true);
                 });
     
             });
