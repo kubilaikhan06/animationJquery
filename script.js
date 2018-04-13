@@ -21,11 +21,11 @@ $(document).ready(function(){
     
                 // méthodes fadeOut et fadeIn                
                 $('#b1').click(function(){
-                    $('img').fadeOut(3000);
-                });
-                $('#b2').click(function(){
-                    image.src = "images/velo2.jpg";
-                    $('img').fadeIn(3000);
+                    $('img').fadeOut(3000)
+                            .queue(function(){
+                            $(this).show(image.src = "images/velo2.jpg").dequeue()                          
+                            })
+                            .fadeIn(3000);
                 });
                 
                 // méthode fadeToggle
