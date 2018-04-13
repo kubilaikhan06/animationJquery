@@ -38,7 +38,7 @@ $(document).ready(function(){
                     $('img').slideUp(3000);
                 });
                 $('#cacher').mouseleave(function(){
-                    image.src = "images/chuteCuisine.gif";
+                    image.src = "images/macron1.jpg";
                     $('img').slideDown(3000);
                 });
                 
@@ -59,9 +59,9 @@ $(document).ready(function(){
                         .queue(function(){
                             $(this).show(image.src = "images/joyeuxNoel.jpg").dequeue();
                         })
-                        .slideDown(300)
-                        .animate({width:'-=10%'}, 500)
-                        .animate({left: '+=200px'}, 500)
+                        .slideDown(2000)
+                        .animate({width:'-=10%'}, 1000)
+                        .animate({left: '+=200px'}, 1000)
                 });
     
                 // permet d'arrêter l'animation après celle qui a été lancée
